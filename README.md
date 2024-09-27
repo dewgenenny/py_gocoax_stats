@@ -4,7 +4,7 @@ This is a script to fetch stats from GoCoax device (only tested with MA2500D, mi
 
 You can just specify username, password and host and it will print to the command line. If you add your MQTT details, it will also publish to MQTT :) 
 
-Example output:
+Example command line output:
 
 ```
 Connecting to host: http://192.168.xxx.xxx
@@ -40,6 +40,30 @@ NodeID  GCD Rate
 0       701
 1       701
 ```
+
+Example mqtt output:
+
+```
+moca/192.168.xxx.xxx/status/soc_version MXL371x.1.18
+moca/192.168.xxx.xxx/status/my_moca_version 2.5
+moca/192.168.xxx.xxx/status/network_moca_version 2.5
+moca/192.168.xxx.xxx/status/ip_address 192.168.xxx.xxx
+moca/192.168.xxx.xxx/status/mac_address 94:cc:04:xx:xx:xx
+moca/192.168.xxx.xxx/status/link_status Up
+moca/192.168.xxx.xxx/status/lof 1150
+moca/192.168.xxx.xxx/status/ethernet_tx/tx_good 2356264
+moca/192.168.xxx.xxx/status/ethernet_tx/tx_bad 0
+moca/192.168.xxx.xxx/status/ethernet_tx/tx_dropped 0
+moca/192.168.xxx.xxx/status/ethernet_rx/rx_good 471682
+moca/192.168.xxx.xxx/status/ethernet_rx/rx_bad 0
+moca/192.168.xxx.xxx/status/ethernet_rx/rx_dropped 0
+moca/192.168.xxx.xxx/phy_rates/gcd_rate/0 701
+moca/192.168.xxx.xxx/phy_rates/gcd_rate/1 701
+moca/192.168.xxx.xxx/phy_rates/from_0/to_0 701
+moca/192.168.xxx.xxx/phy_rates/from_0/to_1 3656
+moca/192.168.xxx.xxx/phy_rates/from_1/to_0 3656
+moca/192.168.xxx.xxx/phy_rates/from_1/to_1 701
+``` 
 
 usage: py_gocoax_stats.py [-h] --username USERNAME --password PASSWORD --hosts HOSTS
                           [--mqtt-host MQTT_HOST] [--mqtt-port MQTT_PORT]
