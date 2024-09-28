@@ -303,7 +303,7 @@ Contributions are welcome! Please open an issue or submit a pull request on GitH
 
 If you like this and find it useful, I'd really appreciate a coffee! It will fuel more nice things :) :) :)
 
-[!["Buy Me A Beer"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/dewgenenny)
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/dewgenenny)
 
 
 ## Contact
