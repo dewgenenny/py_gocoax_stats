@@ -73,7 +73,7 @@ You can run the script directly from the command line to fetch and display stats
 #### Syntax
 
 ```bash
-python moca_info.py --username USERNAME --password PASSWORD --hosts HOST1,HOST2 [OPTIONS]
+python py_gocoax_stats.py --username USERNAME --password PASSWORD --hosts HOST1,HOST2 [OPTIONS]
 ```
 
 #### Required Arguments
