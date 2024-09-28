@@ -1,1 +1,1 @@
-* * * * * root /usr/bin/env bash -c 'cd /app && ./moca_info.py >> /var/log/cron.log 2>&1'
+* * * * * root . /etc/environment; /app/run_moca_info.sh >> /var/log/cron.log 2>&1

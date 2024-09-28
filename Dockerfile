@@ -13,11 +13,15 @@ RUN apt-get update && \
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the current directory contents into the container at /app
+# Copy the application files
 COPY moca_info.py /app/moca_info.py
+COPY run_moca_info.sh /app/run_moca_info.sh
+COPY entrypoint.sh /entrypoint.sh
 
-# Give execution permissions to the script
+# Give execution permissions to the scripts
 RUN chmod +x /app/moca_info.py
+RUN chmod +x /app/run_moca_info.sh
+RUN chmod +x /entrypoint.sh
 
 # Copy the crontab file to the cron.d directory
 COPY crontab /etc/cron.d/moca_cron
@@ -25,11 +29,9 @@ COPY crontab /etc/cron.d/moca_cron
 # Give execution rights on the cron job
 RUN chmod 0644 /etc/cron.d/moca_cron
 
-# Apply cron job
-RUN crontab /etc/cron.d/moca_cron
-
 # Create the log file to be able to run tail
 RUN touch /var/log/cron.log
 
-# Set the entrypoint to run the cron daemon
-CMD ["cron", "-f"]
+# Set the entrypoint to run the entrypoint script
+ENTRYPOINT ["/entrypoint.sh"]
+
