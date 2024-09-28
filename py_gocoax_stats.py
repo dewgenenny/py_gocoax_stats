@@ -252,12 +252,12 @@ def display_device_info(device_info):
     txgood = ((int(frame_info[12], 16) & 0xFFFFFFFF) * 4294967296) + int(frame_info[13], 16)
     txbad = ((int(frame_info[30], 16) & 0xFFFFFFFF) * 4294967296) + int(frame_info[31], 16)
     txdropped = ((int(frame_info[48], 16) & 0xFFFFFFFF) * 4294967296) + int(frame_info[49], 16)
-    ethTxVal = f"Tx Good: {txgood}\nTx Bad: {txbad}\nTx Dropped: {txdropped}"
+    ethTxVal = f"Tx Good: {txgood}\n Tx Bad: {txbad}\n Tx Dropped: {txdropped}"
 
     rxgood = ((int(frame_info[66], 16) & 0xFFFFFFFF) * 4294967296) + int(frame_info[67], 16)
     rxbad = ((int(frame_info[84], 16) & 0xFFFFFFFF) * 4294967296) + int(frame_info[85], 16)
     rxdropped = ((int(frame_info[102], 16) & 0xFFFFFFFF) * 4294967296) + int(frame_info[103], 16)
-    ethRxVal = f"Rx Good: {rxgood}\nRx Bad: {rxbad}\nRx Dropped: {rxdropped}"
+    ethRxVal = f"Rx Good: {rxgood}\n Rx Bad: {rxbad}\n Rx Dropped: {rxdropped}"
 
     # IP Address
     ipAddr = int(ip_addr[0], 16)
