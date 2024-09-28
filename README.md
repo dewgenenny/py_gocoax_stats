@@ -94,7 +94,7 @@ python py_gocoax_stats.py --username USERNAME --password PASSWORD --hosts HOST1,
 #### Example
 
 ```bash
-python moca_info.py \
+python py_gocoax_stats.py \
   --username admin \
   --password yourpassword \
   --hosts 192.168.1.100,192.168.1.101 \
