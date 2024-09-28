@@ -109,6 +109,26 @@ python py_gocoax_stats.py \
 
 You can run the script inside a Docker container, scheduled to execute every minute using `cron`. Configuration is provided via environment variables.
 
+#### Running using DockerHub image
+
+This is the easiest way to get going - the DockerHub image gets built every time the project is updated
+
+```
+docker run -d \
+  --name moca_stats \
+  -e MOCA_USERNAME=yourusername \
+  -e MOCA_PASSWORD=yourpassword \
+  -e MOCA_HOSTS=192.168.1.100,192.168.1.101 \
+  -e MQTT_HOST=mqtt.example.com \
+  -e MQTT_PORT=1883 \
+  -e MQTT_USERNAME=mqttuser \
+  -e MQTT_PASSWORD=mqttpass \
+  -e MQTT_BASE_TOPIC=moca \
+  -e DEBUG=False \
+  dewgenenny/moca_stats
+```` 
+
+
 #### Build the Docker Image
 
 ```bash
