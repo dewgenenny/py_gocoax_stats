@@ -299,7 +299,7 @@ Contributions are welcome! Please open an issue or submit a pull request on GitH
 
 ---
 
-## Buy me a beer
+## Buy me a coffee
 
 If you like this and find it useful, I'd really appreciate a coffee! It will fuel more nice things :) :) :)
 
