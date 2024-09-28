@@ -50,7 +50,7 @@ This script allows you to retrieve device information and MoCA network statistic
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/py_gocoax_stats.git
+git clone https://github.com/dewgenenny/py_gocoax_stats.git
 cd py_gocoax_stats
 ```
 
